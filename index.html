@@ -1,0 +1,447 @@
+<!DOCTYPE HTML>
+<html>
+ 	<head>
+ 		<title>Planet Express</title>
+ 		<meta charset="utf-8">
+ 		<meta name="description" content="">
+		<meta name="keywords" content="">
+  		<link rel="stylesheet" href="css/style.css">  
+  		<link rel="stylesheet" type="text/css" href="css/animate.css">
+  		<script src="js/jquery-1.11.1.min.js"></script>
+  		<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	    <script src="js/jquery.revolver.min.js"></script>
+	    <script src="js/prettify.js"></script>		
+		<script src="js/script.js"></script>	
+ 	</head>
+ 	<body>
+ 		
+ 		<!--Шапка-->
+ 		<header>
+			<!--Логотип-->
+			<div class="logo">
+				<img src="images/logo.png">
+				<span class="lg">Planet<span class="light">Express</span></span>
+			</div>
+		
+			<!--Навигация-->
+			<nav>
+				<ul class="menu">
+					<li><a href="">Contact</a></li>
+					<li><a href="">About Me</a></li>
+					<li><a href="">Works</a>
+						<ul>
+							<li></li>
+							<li><a href="">All</a></li>
+							<li><a href="">Graphic</a></li>
+							<li><a href="">Design</a></li>
+							<li><a href="">Logo</a></li>
+							<li><a href="">Website</a></li>
+						</ul>
+					</li>	
+					<li><a href="">Service</a></li>
+					<li><a href="">Home</a></li>
+				</ul>
+			</nav>
+		
+			<!--Слайдер-->
+			<div class="slider">
+				<div id="revolver" class="revolver container stack">
+
+	                <img class="slide" src="images/slider.jpg" alt="" />
+	                <img class="slide hidden" src="images/slider.jpg" alt="" />
+	                <img class="slide hidden" src="images/slider-1.jpg" alt="" />
+	                <img class="slide hidden" src="images/slider-2.jpg" alt="" />
+	                <img class="slide hidden" src="images/slider-3.jpg" alt="" />
+	                <img class="slide hidden" src="images/slider-4.jpg" alt="" />
+
+	            </div>
+					
+				<!--Заголовок-->
+				<div class="sld">
+	            	<h2>Slider</h2>
+					<img src="images/dvdr.png">
+						<p>Sed laoreet magna at neque sollic-i-tudin, quis tristique ipsum per molestie. Class apt ent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum facilisis malesuada. Integer rhoncus laoreet velit</p>					
+				</div>	
+	            
+	            <!--Цифры переключения слайдера-->
+	            <div class="controls">	                
+		                <a class="previous" href="#">prev</a>                
+		                <a class="goto" data-goto="1" href="#">1</a>
+		                <a class="goto" data-goto="2" href="#">2</a>
+		                <a class="goto" data-goto="3" href="#">3</a>
+		                <a class="goto" data-goto="4" href="#">4</a>
+		                <a class="goto" data-goto="5" href="#">5</a>
+		                <a class="next" href="#">next</a>	             
+	            </div>
+	        <script type="text/javascript">
+
+	            var $revolver = $('#revolver').revolver(),
+	                revolver  = $revolver.data('revolver'),
+	                $controls = $('.controls');
+
+	            $controls.find('.first, .previous, .next, .last, .play, .stop, .pause, .restart').click(function(e){
+	                e.preventDefault();
+	                revolver[this.className]();
+	            });
+
+	            $controls.find('.goto').click(function(e){
+	                e.preventDefault();
+	                revolver.goTo($(this).data('goto'));
+	            });
+
+        	</script>
+		
+			</div>
+		</header>
+		
+		<main>
+
+			<!--Блок WELCOME-->
+			<article class="welcome">
+				
+				<!--Заголовок-->
+				<div class="heading head1">
+					<h2>Welcome</h2>
+					<img src="images/dvdr-1.png">
+					<p>Donec rutrum molestie ipsum ut luctus. Maecenas finibus nisl eget odio bibendum, eu eleifend orci porttitor. Suspendisse vitae lorem facilisis elit tristique aliquet at ac nunc. Sed libero nulla, luctus vitae tempor a, faucibus egestas mauris. Nulla euismod, est ut rhoncus sodales. Cras a elit sed arcu tristique ullamcorper.</p>	
+				</div>
+			
+				<!--Блок контента-->
+				<div class="post welcom1">					
+					<div class="post-img left">
+						<img src="images/welcome1.jpg">						
+					</div>
+					<div class="post-text right">
+						<div class="text-left">
+							<h3>Ui/Ux Design</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim.</p>
+							<p>Males uada est, nec convallis euis mod. Nam eleifen elitinex placerat.</p>							
+						</div>
+					</div>
+					<div class="post-focusing-left">
+						<a href="">Learn more</a>
+					</div>						
+				</div>				
+
+				<div class="post welcom2">					
+					<div class="post-img right">
+						<img src="images/welcome2.jpg">						
+					</div>
+					<div class="post-text left">
+						<div class="text-right">
+							<h3>Web Development</h3>
+							<p>Phasellus interdum aliquam eros, vitae vestibulum elit malesuada ut. Integer nec ex accumsan, suscipit eros a, tempus nisi. Suspendisse pretium elementum.</p>							
+						</div>
+					</div>
+					<div class="post-focusing-right">
+						<a href="">Learn more</a>
+					</div>				
+				</div>	
+
+				<div class="post welcom3">					
+					<div class="post-img left">
+						<img src="images/welcome3.jpg">						
+					</div>
+					<div class="post-text right">
+						<div class="text-left">
+							<h3>Logotype</h3>
+							<p>Donec feugiat eget ex quis efficitur. Aenean turpis mauris, vehicula eget lacus eget, posuere elementum arcu. In nec ultricies massa. Maecenas id sapien rutrum, blandit purus in, ultrices ex.</p>													
+						</div>
+					</div>
+					<div class="post-focusing-left">
+						<a href="">Learn more</a>
+					</div>		
+				</div>	
+
+				<div class="post welcom4">					
+					<div class="post-img right">
+						<img src="images/welcome4.jpg">						
+					</div>
+					<div class="post-text left">
+						<div class="text-right">
+							<h3>Branding</h3>
+							<p>Nulla molestie, neque vel iaculis sodales, leo nulla egestas metus, non gravida nisl risus.</p>
+							<p>Mauris commodo diam at tristique euismod. Phasellus non ex dolor. Nulla facilisi. Nam eleifend turpis.</p>								
+						</div>
+					</div>
+					<div class="post-focusing-right">
+						<a href="">Learn more</a>
+					</div>			
+				</div>	
+			</article>
+
+
+			<!--Блок GALLERY-->
+			<article class="gallery">
+				
+				<!--Заголовок-->
+				<div class="heading head2">
+					<h2>Gallery</h2>
+					<img src="images/dvdr-1.png">
+					<ul>
+						<li><a href="">All</a></li>
+						<li><a href="">Graphic</a></li>
+						<li><a href="">Design</a></li>
+						<li><a href="">Logo</a></li>
+						<li><a href="">Website</a></li>
+						<li><a href="">Photography</a></li>
+						<li><a href="">Branding</a></li>
+						<li><a href="">Video</a></li>						
+					</ul>
+
+					<p>Mauris efficitur non enim eu porta. In hac habitasse platea dictumst. Phasellus interdum aliquam eros, vitae vestibulum elit malesuada ut. Integer nec ex accumsan, suscipit eros a, tempus nisi. Suspendisse pretium, mi sed consequat elementum.</p>	
+				</div>
+
+				<!--Блок картинок-->
+				<div class="post">	
+					<div class="img gallery1">
+						<img src="images/gallery-1.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>	
+					<div class="img gallery2">	
+						<img src="images/gallery-2.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>	
+				</div>	
+				<div class="post">
+					<div class="img gallery3">	
+						<img src="images/gallery-3.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>
+					<div class="img gallery4">	
+						<img src="images/gallery-4.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>	
+				</div>	
+				<div class="post">	
+					<div class="img gallery5">	
+						<img src="images/gallery-5.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>	
+					<div class="img gallery6">	
+						<img src="images/gallery-6.jpg">
+						<div class="focusing">
+							<h3>New New York</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim</p>
+							<a href="">View more</a>
+						</div>
+					</div>
+				</div>	
+			</article>	
+
+
+			<!--Блок ABOUT ME-->
+			<article class="about-me">					
+				
+				<div class="heading head3">
+					<h2>About Me</h2>
+					<img src="images/dvdr-1.png">
+					<p>Vestibulum aliquam turpis quam, tincidunt semper lacus ultricies a. Pellentesque eu aliquet purus. Morbi eu erat in justo egestas euismod.</p>	
+				</div>
+
+				<div class="left bender about-me1">
+					<img src="images/about-me.jpg">
+				</div>
+				<div class="text-about-me">
+					<h3>Bender Bending <span class="bold">Rodriguez</span></h3>
+					<ul>
+						<li><a href="">Facebook</a></li>
+						<li><a href="">Google +</a></li>
+						<li><a href="">Twitter</a></li>
+					</ul>
+					<p>Cras et diam venenatis, vulputate sapien vitae, iaculis nulla. Donec et metus efficitur, vestibulum purus non, sodales urna. Fusce id rhoncus nisi. In sagittis feugiat convallis. Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi.</p>
+					<p>Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl. Donec vel iaculis turpis, eu feugiat urna. Sed urna elit, sollicitudin non euismod sit amet, volutpat ac nulla. Quisque <br><br> consectetur, mauris dignissim aliquet facilisis, diam quam condimentum lacus, ac pulvinar nulla velit eget elit. Vivamus maximus, leo nec vestibulum fringilla, lacus lectus mollis est, in imperdiet turpis lectus id mi. Morbi turpis eros, condimentum in magna vel, finibus varius velit. Donec pharetra magna in metus pretium, ac porttitor metus viverra. Etiam turpis nibh, euismod ac ligula at.</p>
+				</div>		
+					
+					<!--Гистограмма-->
+					<div class="skills right about-me2">
+				 		<h4>Skills</h4>
+				 		<ul class="chartlist">
+						  <li>
+						    <div class="specialization">HTML/CSS</div>
+							<div class="diagram">			    
+							    <span class="count html">80%</span>
+							    <span class="index" style="width: 80%"></span>
+						  	</div>
+						  </li>
+						  <li>
+						    <div class="specialization">Responsive web desing</div>
+						    <div class="diagram">	
+							    <span class="count desing">66%</span>
+							    <span class="index" style="width: 66%"></span>
+							</div>    
+						  </li>
+						  <li>
+						    <div class="specialization">Droid development</div>
+						    <div class="diagram">	
+							    <span class="count droid">92%</span>
+							    <span class="index" style="width: 92%"></span>
+							</div>    
+						  </li>
+						  <li>
+						    <div class="specialization">Cookies</div>
+						    <div class="diagram">	
+							    <span class="count cookies">38%</span>
+							    <span class="index" style="width: 38%"></span>
+							</div>    
+						  </li>
+						</ul>
+					</div>	
+				<div class="gistogramma-text">	
+					<p>Donec et metus efficitur, vestibulum purus non, sodales urna. Fusce id rhoncus nisi. In sagittis feugiat convallis.</p>
+					<p>Aliquam non lacinia ante. Etiam nunc lorem, posuere non lacus ac, blandit finibus mi. Curabitur nisi neque, eleifend in fermentum quis, lacinia ut nisl.</p>					
+				</div>
+			</article>
+
+
+			<!--Блок BLOG-->
+			<article class="blog">
+				<div class="heading head4">
+					<h2>Blog</h2>
+					<img src="images/dvdr-1.png">
+					<p>Cras feugiat tortor vitae ultrices euismod. Aliquam mollis urna ex, sit amet fermentum diam convallis at. Integer mauris eros, rutrum id pharetra nec, tincidunt quis sem.</p>	
+				</div>	
+
+				<div class="post blog1">					
+					<div class="post-img left">
+						<img src="images/blog-1.jpg">						
+					</div>
+					<div class="post-text right">
+						<div class="text-left">
+							<p><span class="data">20 January 2014 by Bender</span></p>
+							<h3>Lorem ipsum dolor sit amet, consectetur adipiscing</h3>
+							<p>Fusce posuere et males uada est, nec convallis euis mod. Nam eleifen elitinex placerat semper vitae et enim.</p>
+							<p>Males uada est, nec convallis euis mod. Nam eleifen elitinex placerat.</p>							
+						</div>
+					</div>
+					<div class="post-focusing-left">
+						<a href="">Read more</a>
+					</div>						
+				</div>				
+
+				<div class="post blog2">					
+					<div class="post-img right">
+						<img src="images/blog-2.jpg">						
+					</div>
+					<div class="post-text left">
+						<div class="text-right">
+							<p><span class="data">20 January 2014 by Bender</span></p>	
+							<h3>Etiam suscipit odio quis ipsum facilisis dapibus</h3>
+							<p>Proin quis cursus sapien. Suspendisse ultricies massa eu metus laoreet, eget molestie ex maximus. Nulla efficitur ipsum tortor, ac euismod felis placerat vel. Nulla facilisi. Pellentesque habitant morbi</p>							
+						</div>
+					</div>
+					<div class="post-focusing-right">
+						<a href="">Read more</a>
+					</div>				
+				</div>	
+
+				<div class="post blog3">					
+					<div class="post-img left">
+						<img src="images/blog-3.jpg">						
+					</div>
+					<div class="post-text right">
+						<div class="text-left">
+							<p><span class="data">20 January 2014 by Bender</span></p>
+							<h3>Vivamus semper a orci et posuere. Ut vulputate ante risus, placerat</h3>
+							<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer condimentum elementum ipsum a gravida. Sed est est, malesuada nec porttitor eu, aliquam non magn</p>													
+						</div>
+					</div>
+					<div class="post-focusing-left">
+						<a href="">Read more</a>
+					</div>		
+				</div>	
+
+				<div class="post blog4">					
+					<div class="post-img right">
+						<img src="images/blog-4.jpg">						
+					</div>
+					<div class="post-text left">
+						<div class="text-right">
+							<p><span class="data">20 January 2014 by Bender</span></p>
+							<h3>Etiam suscipit odio quis ipsum facilisis dapibus</h3>
+							<p>Proin quis cursus sapien. Suspendisse ultricies massa eu metus laoreet, eget molestie ex maximus. Nulla efficitur ipsum tortor, ac euismod felis placerat vel. Nulla facilisi. Pellentesque habitant morbi</p>										
+						</div>
+					</div>
+					<div class="post-focusing-right">
+						<a href="">Read more</a>
+					</div>			
+				</div>	
+
+			</article>
+
+
+			<!--Блок CONTACT-->
+			<article class="contacts">
+				<div class="heading head5">
+					<h2>Contact</h2>
+					<img src="images/dvdr-1.png">
+					<p>Cras feugiat tortor vitae ultrices euismod. Aliquam mollis urna ex, sit amet fermentum diam convallis at. Integer mauris eros, rutrum id pharetra nec, tincidunt quis sem.</p>	
+				</div>
+
+				<div class="maps left">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5121.112387272549!2d20.04181278432012!3d50.0758726495629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47164514ab69124f%3A0x31ecdee6c886c726!2zMzEtOTcwINCa0YDQsNC60L7Qsiwg0J_QvtC70YzRiNCw!5e0!3m2!1sru!2sua!4v1478184478898" width="650" height="540" frameborder="0" style="border:0" allowfullscreen></iframe>
+				</div>
+
+				<div class="feedback">
+					<h4>Address</h4>
+					<p>ul. Lorem Street 123<br>
+					31-970 Kraków<br> 
+					Polska</p>
+					<p>Email: <span class="bold">sample@mail.com</span> <br>
+					Phone: <span class="bold">+49 5241 80-0 00</span><br>
+					Mobile: <span class="bold">+49 5241 80-0 00</span><br>
+					Facebook: <a href=""><span class="bold">facebook.com/username</span></a><br>
+					Twitter: <a href=""><span class="bold">twitter.com/username</span></a></p>
+
+
+					<form action="">
+						<span class="form">Name</span><br>
+						<input type="" name=""><br>
+						<span class="form">Email</span><br>
+						<input type="" name=""><br>
+						<span class="form">Message</span><br>
+						<span class="message"><input type="" name=""></span><br>
+						<span class="submit"><input type="submit" value="send"></span>
+					</form>
+				</div>				
+			</article>	
+		</main>
+
+
+		<!--Подвал-->
+		<footer>
+			<div class="footer"> 
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Service</a></li>
+					<li><a href="">Works</a></li>
+					<li><a href="">About me</a></li>
+					<li><a href="">Contact</a></li>				
+				</ul>
+				<img src="images/dvdr-1.png"><br>
+				<p><span class="copyright">© 2015 Planet<b>Express</b></span> All right reserved</p>
+			</div>
+		</footer>
+		
+	</body>
+</html>

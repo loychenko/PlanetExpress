@@ -1,0 +1,696 @@
+/* Подключение шрифтов */
+@font-face {
+    font-family: opensans extrabold; /* Имя шрифта */
+    src: url(../fonts/ExtraBold/OpenSans-ExtraBold.ttf); /* Путь к файлу со шрифтом */
+	
+   }
+@font-face {   
+   font-family: opensans light; /* Имя шрифта */
+   src: url(../fonts/Light/OpenSans-Light.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {   
+   font-family: opensans bold; /* Имя шрифта */
+   src: url(../fonts/Bold/OpenSans-Bold.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {   
+   font-family: opensans regular; /* Имя шрифта */
+   src: url(../fonts/Regular/OpenSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+
+/* Общие стили */
+body {
+	background: white;		
+}
+main {
+	display: block;
+	width: 1300px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	margin-left: auto;
+	margin-right: auto;
+}
+p {
+	font-size: 17px;
+	font-family: opensans regular;
+	text-transform: none;
+}
+h2 {
+	font-size: 41px;
+	font-family: opensans extrabold;
+	margin: 0;
+	padding: 0;	
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 20px;
+	font-family: opensans extrabold;
+	margin: 0;
+	padding: 0;		
+	text-transform: uppercase;
+}
+
+/* Шапка */
+header {
+	display: block;
+	width: 1300px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	margin-top: -10px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 750px;	
+	color: white;	
+	font-family: opensans extrabold;
+	text-transform: uppercase;
+	background: rgba(12, 154, 236, 0.88);
+}
+.logo {
+	display: block;	
+	float: left;	
+}
+.logo img {	
+	margin: 40px 31px 0 40px;	
+}
+.logo .lg {	
+	float: right;
+	font-size: 27px;
+	margin-top: 47px;	
+}
+.logo .light {
+	font-family: opensans light;
+	font-size: 26px;		
+}
+nav {
+	float: right;	
+}
+
+/*Горизонтальное выпадающее меню*/
+ul.menu {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	width: 600px;	
+}
+ul.menu li {
+	float: right;
+	list-style: none;	
+	position: relative;
+	z-index: 100;
+}
+ul.menu li a {
+	color: white;
+	display: block;
+	font-family: opensans bold;
+	font-size: 15px;
+	padding-right: 32px;
+	padding-top: 61px;
+	text-decoration: none;	
+}
+ul.menu li:first-child {
+	padding-right: 8px;
+}
+ul.menu li a:hover {
+	color: #1e2123;;
+}
+
+/*Выпадающее меню*/
+ul.menu li ul {
+	display: none;	
+}
+ul.menu li:hover ul {
+	display: block;
+	position: absolute;
+	top: 73px;
+	left: -50px;	
+	z-index: 110;
+	padding: 0;
+}
+ul.menu li:hover ul li {
+	float: none;
+	width: 160px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */	
+	background: #1e2123;
+}
+ul.menu li:hover ul li:first-child {
+	background: url("images/trk2.png");
+	height: 20px;		
+}
+ul.menu li:hover ul li a {	
+	padding: 11px 100px 11px 23px;
+	font-family: opensans extrabold;
+	font-size: 11px;
+	
+}
+ul.menu li:hover ul li:last-child {
+	padding-bottom: 11px;	
+}
+ul.menu li:hover ul li:nth-child(2) {
+	padding-top: 11px;	
+}
+ul.menu li:hover ul li a:hover {
+	display: block;
+	background-color: white;
+	color: #1e2123;
+	margin-left: 3px;
+	margin-right: 3px;
+	padding-left: 19px;	
+}
+
+/* Слайдер */
+.slider {
+	position: absolute;	
+	margin: 0;
+	padding: 0;		
+}
+.revolver.container {    
+    width: 1300px;
+    height: 750px;    
+    overflow: hidden;
+    position: relative;
+	z-index: -10;
+}
+.revolver.stack .slide {
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+.revolver.inline .slide {
+    margin: 0;
+    padding: 0;
+    position: static;
+}
+.revolver.reveal .slide {
+    height: 300px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 720px;
+}
+.sld {
+	position: absolute;
+	top: 295px;
+	left: 335px;			
+}
+.sld img {
+	margin-top: 30px;	
+}
+.sld p {	
+	margin-left: -85px;
+	margin-top: 30px;
+	width: 800px;
+}
+.controls {
+    position: absolute;
+	top: 670px;
+	left: 330px;   
+	z-index: 100;
+	font-family: opensans extrabold;
+	font-size: 16px;	
+}
+.controls a {
+    background-color: rgba(0, 0, 0, 0.0);    
+    color: #fff;
+    padding: 5px 10px;
+    text-decoration: none;
+	border: 3px white solid;
+	margin: 0px;
+	margin-right: 5px;		
+}
+.controls a:hover {
+    background-color: rgba(0, 0, 0, 0.0); 
+    color: black;
+	border: 3px black solid;
+	
+}
+
+.controls a:active {
+    background-color: white; 
+    color: #0c9aec;
+	border: 3px white solid;	
+}
+.hidden {
+    display: none;
+}
+.float_right {
+    float: right;
+}
+
+/* Раздел Welcome */
+.welcome {		
+	display: block;		
+	margin-left: auto;
+	margin-right: auto;	
+	text-transform: uppercase;
+}
+.heading {		
+	margin-top: 190px;
+	margin-left: 330px;
+}
+.heading img {
+	margin-top: 30px;	
+}
+.heading p{	
+	margin-left: -85px;
+	margin-top: 30px;	
+	margin-bottom: 75px;
+	width: 800px;
+}
+
+/* Раздел с картинками */
+.post {
+	width: 1300px;
+	height: 333px;
+	position: relative;
+	overflow: hidden;
+
+}
+.post-img,
+.post-text {	
+	width: 650px;
+	height: 333px;
+	position: relative;	
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;	
+}
+.text-left {
+	display: block;		
+	margin: 80px 250px 0 50px;	
+}
+.text-right {
+	display: block;		
+	margin: 80px 50px 0 250px;	
+}
+.text-right h3 {
+	float: right;
+}
+.text-right p {
+	float: right;
+}
+.post-text {
+	z-index: 10;
+}
+
+/* Изменение при наведении на блок */
+.post-focusing-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  color: white;
+  background: linear-gradient(to left, rgba(12, 154, 236, 1), rgba(12, 154, 236, 1),rgba(12, 154, 236, 0.88));
+  opacity: 0;
+  transition: opacity .7s;
+  cursor: pointer;
+  padding: 80px 80px 0 80px;
+  text-align: center;
+  overflow: hidden;  
+}
+.post-focusing-left a {
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	font-family: opensans extrabold;
+	font-size: 16px;	
+	border: 3px white solid;
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;		
+}
+.post-focusing-left a:hover,
+.post-focusing-right a:hover {
+	background: white;
+	color: #0c9aec;
+}
+.post-focusing-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  color: white;
+  background: linear-gradient(to right, rgba(12, 154, 236, 1), rgba(12, 154, 236, 1),rgba(12, 154, 236, 0.88));
+  opacity: 0;
+  transition: opacity .7s;
+  cursor: pointer;
+  padding: 80px 80px 0 80px;
+  text-align: center;
+  overflow: hidden;
+  
+}
+.post-focusing-right a {
+	position: absolute;
+	bottom: 50px;
+	right: 50px;
+	font-family: opensans extrabold;
+	font-size: 16px;	
+	border: 3px white solid;
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;	
+}
+.post:hover .post-focusing-left,
+.post:hover .post-focusing-right {
+  opacity: 1;
+}
+.post:hover h3,
+.post:hover p {
+	color: white;
+}
+
+/* Раздел Gallery */
+.gallery {	
+	display: block;	
+	text-transform: uppercase;
+}
+.heading ul {
+	padding: 0;
+	margin-top: 35px;
+	width: 640px;	
+}
+.heading ul li{	
+	display: inline-block;
+		
+}
+.heading ul li a {
+	display: block;
+	text-decoration: none;
+	color: #0c9aec;
+	font-family: opensans extrabold;
+	font-size: 16px;
+	border: 3px solid #0c9aec;
+	padding: 5px 10px;	
+	margin-right: 6px;	
+	margin-top: 10px;
+	
+}
+.heading ul li a:hover {	
+	background: #0c9aec;
+	color: white;
+	border: 3px solid #0c9aec;		
+}
+.heading ul li a:active {			
+	background: black;
+	color: white;
+		border: 3px solid black;
+}
+.img {
+	float: left;
+	width: 650px;
+	height: 333px;
+	position: relative;
+}
+.img .focusing {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  color: white;
+  background: rgba(12, 154, 236, 0.88);
+  opacity: 0;
+  transition: opacity .7s;
+  cursor: pointer;
+  padding: 80px 80px 0 80px;
+  text-align: center;
+  overflow: hidden;
+}
+.img .focusing p {
+	font-size: 15px;
+	margin-bottom: 40px;
+}
+.img .focusing a {
+	font-family: opensans extrabold;
+	font-size: 16px;	
+	border: 3px white solid;
+	text-decoration: none;
+	color: white;
+	padding: 5px 10px;	
+}
+.img .focusing a:hover {
+	background: white;
+	color: #0c9aec;
+}
+.img:hover .focusing {
+	opacity: 1;
+}
+
+/* Раздел about me */
+.about-me {	
+	margin-top: 190px;
+	text-transform: uppercase;
+}
+.bender {
+	margin-top: 30px;	
+	margin-right: 25px;
+	margin-bottom: 25px;	
+}
+.text-about-me {	
+	padding-right: 240px;
+	padding-left: 250px;
+}
+.text-about-me h3 {
+	font-family: opensans regular;
+	text-transform: uppercase;
+	font-size: 33px;
+	margin-top: 95px;
+	display: block;		
+}
+.text-about-me h3 .bold {
+	font-family: opensans extrabold;
+	margin-top: -10px;
+	display: block;
+}
+.text-about-me ul {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+.text-about-me ul li{	
+	display: inline-block;
+		
+}
+.text-about-me ul li a {
+	display: block;
+	text-decoration: none;
+	color: #0c9aec;
+	font-family: opensans extrabold;
+	font-size: 16px;
+	border: 3px solid #0c9aec;
+	padding: 5px 10px;	
+	margin-right: 6px;	
+	margin-top: 10px;	
+}
+.text-about-me ul li a:hover {	
+	background: #0c9aec;
+	color: white;
+	border: 3px solid #0c9aec;		
+}
+.text-about-me ul li a:active {			
+	background: black;
+	color: white;
+	border: 3px solid black;
+}
+
+/* Диаграмма */
+.gistogramma-text {
+	margin-left: 250px;
+	padding-right: 700px;
+}
+.skills {	
+	width: 650px;
+	display: block;	
+}
+.skills h4 {
+	font-family: opensans extrabold;
+ 	font-size: 13px;
+ 	text-transform: uppercase; 
+}
+.chartlist li {
+	list-style-type: none;
+	margin-bottom: 20px;
+	position: relative;
+	margin-left: -40px;
+	display: block;
+}
+.chartlist li .diagram{
+  position: relative;
+  display: block;
+  background: #eeeeee;
+  height: 11px;
+}
+.chartlist li .specialization{
+ 	text-transform: uppercase; 
+ 	font-family: opensans regular;
+ 	font-size: 13px;
+ 	margin-bottom: 5px;
+}
+.chartlist li .count{
+ 	display: block;
+ 	width: 43px;
+ 	height: 22px;
+ 	color: white;
+ 	background: black;	
+ 	position: absolute; 	
+ 	bottom: 10px;
+ 	font-family: opensans extrabold;
+ 	font-size: 12px;
+ 	text-align: center;
+ 	padding-top: 2px;
+ 	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+}
+.chartlist li .html {
+	left: 80%;
+}
+.chartlist li .desing {
+	left: 66%;
+}
+.chartlist li .droid {
+	left: 92%;
+}
+.chartlist li .cookies {
+	left: 38%;
+}
+.chartlist .index {   
+  display: block;   
+  position: absolute;   
+  top: 0;   
+  left: 0;   
+  height: 100%;   
+  background: #0c9aec;    
+  overflow: hidden; 
+}
+
+/* блок BLOG */
+.blog {
+	margin-top: 270px;
+	text-transform: uppercase;
+}
+.text-left p .data {
+	display: block;
+	font-family: opensans regular;
+ 	font-size: 13px; 	
+ 	margin-top: -25px;
+ 	margin-bottom: -15px;	 	
+}
+.text-right p .data {
+	display: block;
+	font-family: opensans regular;
+ 	font-size: 13px; 	
+ 	margin-top: -25px; 	
+}
+.blog .text-right h3{
+	margin-top: -25px;
+}
+
+/* блок CONTACTS */
+.feedback {	
+	margin-left: 690px;
+}
+.feedback h4 {
+	text-transform: uppercase;
+	font-family: opensans bold;
+	font-size: 17px; 
+}
+.feedback p {
+	margin-bottom: 40px;
+}
+.feedback p a {
+	text-decoration: none;
+	color: #0c9aec;	
+}
+.feedback p a:hover {
+	text-decoration: none;
+	color: black;	
+}
+.feedback p .bold {
+	font-family: opensans bold;
+}
+
+/* Форма ввода данных */
+form .form{
+	text-transform: uppercase;
+	font-family: opensans bold;
+	font-size: 15px;	
+}
+form input {
+	width: 360px;
+	height: 50px;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box; /*Firefox 1-3*/
+	-webkit-box-sizing: border-box; /* Safari */
+	border: solid 3px #e8e8e9;
+	padding: 15px;
+	font-size: 15px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+form input:focus {
+	border: solid 3px black;
+	outline: none;
+}
+form .message input {
+	height: 180px;	
+	padding-bottom: 150px;	
+}
+form .submit input {
+	width: 62px;
+	height: 34px;
+	font-family: opensans bold;	
+	text-transform: uppercase;
+	color: #0c9aec;
+	border: solid 3px #0c9aec;
+	font-size: 15px;
+	padding: 5px;
+	background: white;
+}
+form .submit input:hover {
+	background: #0c9aec;
+	color: white;
+}
+
+/* Подвал */
+.footer {
+	margin-right: 40px;
+	float: right;
+}
+footer {
+	height: 200px;
+	margin-top: 170px;
+}
+footer ul li {	
+	text-transform: uppercase;
+	display: inline-block;
+	list-style-type: none;
+}
+footer ul li a {
+	color: black;
+	text-decoration: none;
+	font-family: opensans bold;	
+	font-size: 15px;
+	margin-left: 15px;
+}
+footer ul li a:hover {
+	color: #0c9aec;	
+}
+footer img {
+	float: right;
+}
+footer p {
+	float: right;
+	font-size: 15px;
+	margin-top: 10px;
+}
+footer p .copyright {
+	text-transform: uppercase;
+}
